@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using TigerTix.Entities;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<TigerTixDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
