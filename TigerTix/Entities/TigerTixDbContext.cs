@@ -6,6 +6,8 @@ namespace TigerTix.Entities
     {
         public DbSet<UserAccount> UsersAccounts { get; set; }
 
+		public DbSet<EventHandler> EventAccounts { get; set; }
+
         public TigerTixDbContext(DbContextOptions options) : base(options) 
         {
 
